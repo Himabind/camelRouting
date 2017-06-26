@@ -25,7 +25,8 @@ public class JmsRoute extends RouteBuilder {
 			public void process(Exchange exchange)throws Exception{
 				log.info("Exchange {}", exchange);
 				exchange.setProperty("hello", new String("hi"));
-				
+
+
 			}
 		})
 				
@@ -35,6 +36,8 @@ public class JmsRoute extends RouteBuilder {
 		.log(LoggingLevel.INFO, log, "Message sent. Iteration: ${property.CamelLoopIndex}")
 		.end();
 
+		
+		
 	}
 
 }
